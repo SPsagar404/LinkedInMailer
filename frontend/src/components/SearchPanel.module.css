@@ -1,0 +1,233 @@
+.panel {
+  margin-bottom: var(--space-lg);
+}
+
+.header {
+  margin-bottom: var(--space-lg);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* ── Search Form ────────────────────────────────────────────── */
+.form {
+  margin-bottom: var(--space-md);
+}
+
+.searchRow {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: stretch;
+}
+
+.inputWrapper {
+  flex: 1;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 16px 14px 42px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all var(--transition-base);
+}
+
+.searchInput:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.searchInput:disabled {
+  opacity: 0.6;
+}
+
+/* ── Max Posts ───────────────────────────────────────────────── */
+.maxPostsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.maxPostsLabel {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.maxPostsSelect {
+  padding: 10px 12px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.maxPostsSelect:focus {
+  border-color: var(--accent-primary);
+}
+
+/* ── Search Button ──────────────────────────────────────────── */
+.searchBtn {
+  padding: 14px 28px;
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+}
+
+/* ── Quick Searches ─────────────────────────────────────────── */
+.quickSearches {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.quickLabel {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.quickChip {
+  padding: 5px 12px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.quickChip:hover {
+  color: var(--accent-light);
+  border-color: var(--accent-primary);
+  background: var(--accent-glow);
+}
+
+.quickChip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .searchRow {
+    flex-direction: column;
+  }
+
+  .searchBtn {
+    width: 100%;
+  }
+}
+
+/* ── Filter row ────────────────────────────────────────────── */
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+}
+
+.fieldLabel {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.fieldSelect {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 8px 10px;
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+}
+
+.fieldSelect:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.fieldSelect:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.advancedToggle {
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  padding: 8px 0;
+  font-family: inherit;
+}
+
+.advancedToggle:hover {
+  text-decoration: underline;
+}
+
+.advancedNote {
+  flex: 1;
+  min-width: 240px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.scaleNote {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--info-bg);
+  border-radius: var(--radius-sm);
+  color: var(--info);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.rangeRow { display: flex; align-items: center; gap: 6px; }
+.rangeRow .fieldSelect { min-width: 70px; }
+.rangeDash { font-size: var(--font-size-xs); color: var(--text-muted); }

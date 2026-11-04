@@ -1,0 +1,108 @@
+.container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* ── Author Cell ────────────────────────────────────────────── */
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.authorAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+  color: white;
+}
+
+.authorName {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.authorHeadline {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Content Preview ────────────────────────────────────────── */
+.contentPreview {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1.5;
+  max-width: 300px;
+  transition: color var(--transition-fast);
+}
+
+.contentPreview:hover {
+  color: var(--text-primary);
+}
+
+.expanded .contentPreview {
+  max-width: none;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}
+
+/* ── Tags & Badges ──────────────────────────────────────────── */
+.emailsList,
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.noData {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ── Actions ────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,72 @@
+.pageHeader {
+  margin-bottom: var(--space-xl);
+}
+
+.pageTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* ── Scraping Status ────────────────────────────────────────── */
+.scrapingStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-color: var(--accent-primary);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.scrapingStatus h3 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--accent-light);
+}
+
+.scrapingStatus p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+/* ── Bulk send progress banner ─────────────────────────────── */
+.bulkProgress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  background: var(--info-bg);
+  border: 1px solid var(--info);
+  border-radius: var(--radius-md);
+  color: var(--info);
+  font-size: var(--font-size-sm);
+}
+
+.bulkProgress button {
+  margin-left: auto;
+}
+
+.bulkSpinner {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: bulkSpin 0.8s linear infinite;
+}
+
+@keyframes bulkSpin {
+  to { transform: rotate(360deg); }
+}

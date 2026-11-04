@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .greeting { font-size: 16px; margin-bottom: 16px; }
+        .body-text { font-size: 14px; margin-bottom: 16px; }
+        .signature { font-size: 14px; color: #555; margin-top: 24px; border-top: 1px solid #eee; padding-top: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="greeting">Dear Hiring Manager,</p>
+        
+        <p class="body-text">
+            I came across your recent LinkedIn post about the <strong>{{role}}</strong> opening
+            and I'm very excited about this opportunity. With my relevant experience and skills,
+            I believe I would be a great fit for this position.
+        </p>
+        
+        <p class="body-text">
+            I have attached my resume for your consideration. I would love the opportunity to 
+            discuss how my background and skills align with your team's needs.
+        </p>
+        
+        <p class="body-text">
+            Please feel free to reach out at your convenience. I look forward to hearing from you.
+        </p>
+        
+        <div class="signature">
+            <p>Best regards,<br>
+            <strong>{{sender_name}}</strong><br>
+            {{sender_email}}</p>
+        </div>
+    </div>
+</body>
+</html>

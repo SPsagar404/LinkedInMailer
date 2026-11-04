@@ -1,0 +1,41 @@
+# ── Secrets — never commit ──────────────────────────────────────
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env.local
+
+# Live LinkedIn session cookies — equivalent to a logged-in session
+linkedin_cookies.json
+backend/linkedin_cookies.json
+
+# ── Personal data ───────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+backend/uploads/
+backend/resume*.pdf
+backend/resume_meta.json
+*.csv
+
+# Debug screenshots from failed scrapes
+*.png
+debug_*.html
+
+# ── Dependencies / build output ─────────────────────────────────
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.next/
+out/
+build/
+dist/
+.turbo/
+
+# ── Editor / OS ─────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,44 @@
+.container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.emailAddr {
+  font-family: 'Inter', monospace;
+  font-size: var(--font-size-sm);
+  color: var(--accent-light);
+}
+
+.subject {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.date {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.noData {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
